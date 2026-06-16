@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using Platform.Messaging.Abstractions;
 using Platform.Messaging.Configurations;
 using Platform.Messaging.Constants;
 using Platform.Messaging.DependencyInjection;
