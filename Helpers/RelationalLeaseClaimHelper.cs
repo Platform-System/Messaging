@@ -27,9 +27,11 @@ public static class RelationalLeaseClaimHelper
             configureCommand(command);
 
             var claimedItems = new List<TClaimed>();
-            await using var reader = await command.ExecuteReaderAsync(cancellationToken);
-            while (await reader.ReadAsync(cancellationToken))
-                claimedItems.Add(map(reader));
+            await using (var reader = await command.ExecuteReaderAsync(cancellationToken))
+            {
+                while (await reader.ReadAsync(cancellationToken))
+                    claimedItems.Add(map(reader));
+            }
 
             await transaction.CommitAsync(cancellationToken);
             return claimedItems;
