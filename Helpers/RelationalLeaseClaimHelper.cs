@@ -21,16 +21,19 @@ public static class RelationalLeaseClaimHelper
 
         try
         {
-            await using var command = connection.CreateCommand();
-            command.Transaction = transaction;
-            command.CommandText = commandText;
-            configureCommand(command);
-
             var claimedItems = new List<TClaimed>();
-            await using (var reader = await command.ExecuteReaderAsync(cancellationToken))
+
+            await using (var command = connection.CreateCommand())
             {
-                while (await reader.ReadAsync(cancellationToken))
-                    claimedItems.Add(map(reader));
+                command.Transaction = transaction;
+                command.CommandText = commandText;
+                configureCommand(command);
+
+                await using (var reader = await command.ExecuteReaderAsync(cancellationToken))
+                {
+                    while (await reader.ReadAsync(cancellationToken))
+                        claimedItems.Add(map(reader));
+                }
             }
 
             await transaction.CommitAsync(cancellationToken);
