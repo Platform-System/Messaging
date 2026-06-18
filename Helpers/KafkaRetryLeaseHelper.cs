@@ -20,7 +20,7 @@ public static class KafkaRetryLeaseHelper
         where TEntity : class
     {
         var now = DateTime.UtcNow;
-        if (!dbContext.Database.IsRelational())
+        if (!dbContext.Database.IsRelational() || IsSqlite(dbContext))
         {
             var fallbackRetryMessage = await eligibleQuery
                 .FirstOrDefaultAsync(cancellationToken);
@@ -69,4 +69,10 @@ public static class KafkaRetryLeaseHelper
                 reader.GetInt32(2)),
             cancellationToken);
     }
+
+    private static bool IsSqlite(DbContext dbContext)
+        => string.Equals(
+            dbContext.Database.ProviderName,
+            "Microsoft.EntityFrameworkCore.Sqlite",
+            StringComparison.Ordinal);
 }
