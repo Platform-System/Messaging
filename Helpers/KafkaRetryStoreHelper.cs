@@ -2,7 +2,6 @@ using System.Text.Json;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
-using Platform.BuildingBlocks.DateTimes;
 using Platform.Messaging.Models;
 
 namespace Platform.Messaging.Helpers;
@@ -78,7 +77,7 @@ public static class KafkaRetryStoreHelper
         where TEntity : class
     {
         var payload = JsonSerializer.Serialize(envelope, serializerOptions);
-        var nextAttemptAt = envelope.NextAttemptAt ?? Clock.Now;
+        var nextAttemptAt = envelope.NextAttemptAt ?? DateTime.UtcNow;
 
         return UpdateAsync(
             dbContext,

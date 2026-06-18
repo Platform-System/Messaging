@@ -1,7 +1,6 @@
 using System.Data.Common;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
-using Platform.BuildingBlocks.DateTimes;
 using Platform.Messaging.Models;
 
 namespace Platform.Messaging.Helpers;
@@ -20,7 +19,7 @@ public static class KafkaRetryLeaseHelper
         CancellationToken cancellationToken)
         where TEntity : class
     {
-        var now = Clock.Now;
+        var now = DateTime.UtcNow;
         if (!dbContext.Database.IsRelational() || IsSqlite(dbContext))
         {
             var fallbackRetryMessage = await eligibleQuery
