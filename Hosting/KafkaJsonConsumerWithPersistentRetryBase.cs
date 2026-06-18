@@ -3,6 +3,7 @@ using Confluent.Kafka;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Platform.BuildingBlocks.DateTimes;
 using Platform.Messaging.Abstractions;
 using Platform.Messaging.Configurations;
 using Platform.Messaging.Helpers;
@@ -57,7 +58,7 @@ public abstract class KafkaJsonConsumerWithPersistentRetryBase<TMessage, TOption
 
     protected sealed override KafkaRetryEnvelope<TMessage> CreateInvalidMessageEnvelope(ConsumeResult<string, string> consumeResult)
     {
-        var now = DateTime.UtcNow;
+        var now = Clock.Now;
         return KafkaEnvelopeFactory.CreateInvalidRetryEnvelope(
             new TMessage(),
             consumeResult.Topic,
@@ -91,7 +92,7 @@ public abstract class KafkaJsonConsumerWithPersistentRetryBase<TMessage, TOption
         string error,
         int retryCount)
     {
-        var failedAt = DateTime.UtcNow;
+        var failedAt = Clock.Now;
         return KafkaEnvelopeFactory.CreateRetryEnvelope(
             context,
             error,
