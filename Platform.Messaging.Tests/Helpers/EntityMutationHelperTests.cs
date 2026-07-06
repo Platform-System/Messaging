@@ -10,7 +10,7 @@ public sealed class EntityMutationHelperTests
     public async Task UpdateAsync_WhenUsingNonRelationalProvider_AppliesFallbackAndPersistsChanges()
     {
         await using var dbContext = CreateDbContext();
-        var entity = new TestEntity { Id = Guid.NewGuid(), Name = "before" };
+        var entity = new TestEntity { Id = Guid.CreateVersion7(), Name = "before" };
         await dbContext.Entities.AddAsync(entity);
         await dbContext.SaveChangesAsync();
 
@@ -30,7 +30,7 @@ public sealed class EntityMutationHelperTests
     public async Task DeleteAsync_WhenUsingNonRelationalProvider_RemovesEntity()
     {
         await using var dbContext = CreateDbContext();
-        var entity = new TestEntity { Id = Guid.NewGuid(), Name = "delete-me" };
+        var entity = new TestEntity { Id = Guid.CreateVersion7(), Name = "delete-me" };
         await dbContext.Entities.AddAsync(entity);
         await dbContext.SaveChangesAsync();
 
@@ -46,7 +46,7 @@ public sealed class EntityMutationHelperTests
     private static TestDbContext CreateDbContext()
     {
         var options = new DbContextOptionsBuilder<TestDbContext>()
-            .UseInMemoryDatabase(Guid.NewGuid().ToString("N"))
+            .UseInMemoryDatabase(Guid.CreateVersion7().ToString("N"))
             .Options;
 
         return new TestDbContext(options);
