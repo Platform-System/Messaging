@@ -9,7 +9,7 @@ public static class EntityMutationHelper
     public static Task UpdateAsync<TEntity>(
         DbContext dbContext,
         IQueryable<TEntity> query,
-        Expression<Func<SetPropertyCalls<TEntity>, SetPropertyCalls<TEntity>>> setPropertyCalls,
+        Action<UpdateSettersBuilder<TEntity>> setPropertyCalls,
         Func<CancellationToken, Task<TEntity?>> loadEntityAsync,
         Action<TEntity> applyFallback,
         CancellationToken cancellationToken)

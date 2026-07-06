@@ -55,7 +55,7 @@ public static class KafkaRetryStoreHelper
     public static Task UpdateAsync<TEntity>(
         DbContext dbContext,
         IQueryable<TEntity> query,
-        Expression<Func<SetPropertyCalls<TEntity>, SetPropertyCalls<TEntity>>> setPropertyCalls,
+        Action<UpdateSettersBuilder<TEntity>> setPropertyCalls,
         Action<TEntity> applyFallback,
         CancellationToken cancellationToken)
         where TEntity : class
