@@ -37,7 +37,7 @@ public static class KafkaPersistedRetryProcessor
 
             await publisher.PublishAsync(
                 consumerOptions.DeadLetterTopic,
-                retryBehavior.KeySelector(invalidEnvelope.Payload) ?? Guid.NewGuid().ToString("N"),
+                retryBehavior.KeySelector(invalidEnvelope.Payload) ?? Guid.CreateVersion7().ToString("N"),
                 invalidEnvelope,
                 cancellationToken);
 
@@ -84,7 +84,7 @@ public static class KafkaPersistedRetryProcessor
 
         await publisher.PublishAsync(
             consumerOptions.DeadLetterTopic,
-            retryBehavior.KeySelector(retryEnvelope.Payload) ?? Guid.NewGuid().ToString("N"),
+            retryBehavior.KeySelector(retryEnvelope.Payload) ?? Guid.CreateVersion7().ToString("N"),
             deadLetterEnvelope,
             cancellationToken);
 

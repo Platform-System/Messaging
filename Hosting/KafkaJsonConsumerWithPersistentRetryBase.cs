@@ -81,7 +81,7 @@ public abstract class KafkaJsonConsumerWithPersistentRetryBase<TMessage, TOption
 
         await Publisher.PublishAsync(
             ConsumerOptions.DeadLetterTopic,
-            key ?? Guid.NewGuid().ToString("N"),
+            key ?? Guid.CreateVersion7().ToString("N"),
             envelope,
             cancellationToken);
     }
