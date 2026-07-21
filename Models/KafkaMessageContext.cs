@@ -1,4 +1,4 @@
-namespace Platform.Messaging.Models;
+namespace Messaging.Models;
 
 public sealed record KafkaMessageContext<TMessage>(
     TMessage Message,

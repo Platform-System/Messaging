@@ -1,4 +1,4 @@
-namespace Platform.Messaging.Abstractions;
+namespace Messaging.Abstractions;
 
 public interface IKafkaMessagePublisher
 {

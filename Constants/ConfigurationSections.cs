@@ -1,4 +1,4 @@
-namespace Platform.Messaging.Constants;
+namespace Messaging.Constants;
 
 public static class ConfigurationSections
 {

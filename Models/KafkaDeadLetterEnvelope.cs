@@ -1,4 +1,4 @@
-namespace Platform.Messaging.Models;
+namespace Messaging.Models;
 
 public class KafkaDeadLetterEnvelope<TMessage>
 {

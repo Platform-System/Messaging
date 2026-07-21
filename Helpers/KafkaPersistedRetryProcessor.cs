@@ -1,9 +1,9 @@
 using System.Text.Json;
-using Platform.Messaging.Abstractions;
-using Platform.Messaging.Configurations;
-using Platform.Messaging.Models;
+using Messaging.Abstractions;
+using Messaging.Configurations;
+using Messaging.Models;
 
-namespace Platform.Messaging.Helpers;
+namespace Messaging.Helpers;
 
 public static class KafkaPersistedRetryProcessor
 {

@@ -1,7 +1,7 @@
 using Confluent.Kafka;
-using Platform.Messaging.Configurations;
+using Messaging.Configurations;
 
-namespace Platform.Messaging.Helpers;
+namespace Messaging.Helpers;
 
 public static class KafkaClientConfigFactory
 {

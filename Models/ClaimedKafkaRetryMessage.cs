@@ -1,3 +1,3 @@
-namespace Platform.Messaging.Models;
+namespace Messaging.Models;
 
 public sealed record ClaimedKafkaRetryMessage(Guid Id, string Payload, int RetryCount);

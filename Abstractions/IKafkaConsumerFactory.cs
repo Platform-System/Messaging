@@ -1,6 +1,6 @@
 using Confluent.Kafka;
 
-namespace Platform.Messaging.Abstractions;
+namespace Messaging.Abstractions;
 
 public interface IKafkaConsumerFactory
 {

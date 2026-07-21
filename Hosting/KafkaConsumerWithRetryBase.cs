@@ -1,10 +1,10 @@
 using Confluent.Kafka;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Platform.Messaging.Abstractions;
-using Platform.Messaging.Models;
+using Messaging.Abstractions;
+using Messaging.Models;
 
-namespace Platform.Messaging.Hosting;
+namespace Messaging.Hosting;
 
 public abstract class KafkaConsumerWithRetryBase<TMessage> : BackgroundService
 {

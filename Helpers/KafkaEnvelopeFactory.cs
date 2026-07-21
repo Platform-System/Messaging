@@ -1,6 +1,6 @@
-using Platform.Messaging.Models;
+using Messaging.Models;
 
-namespace Platform.Messaging.Helpers;
+namespace Messaging.Helpers;
 
 public static class KafkaEnvelopeFactory
 {

@@ -1,11 +1,11 @@
 using Confluent.Kafka;
 using Microsoft.Extensions.Logging.Abstractions;
-using Platform.Messaging.Abstractions;
-using Platform.Messaging.Hosting;
-using Platform.Messaging.Models;
+using Messaging.Abstractions;
+using Messaging.Hosting;
+using Messaging.Models;
 using Xunit;
 
-namespace Platform.Messaging.Tests.Hosting;
+namespace Messaging.Tests.Hosting;
 
 public sealed class KafkaConsumerWithRetryBaseTests
 {

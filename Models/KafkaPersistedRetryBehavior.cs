@@ -1,4 +1,4 @@
-namespace Platform.Messaging.Models;
+namespace Messaging.Models;
 
 public sealed class KafkaPersistedRetryBehavior<TMessage>
     where TMessage : class

@@ -1,9 +1,9 @@
-using Platform.Messaging.Configurations;
-using Platform.Messaging.Helpers;
+using Messaging.Configurations;
+using Messaging.Helpers;
 using Xunit;
 using Confluent.Kafka;
 
-namespace Platform.Messaging.Tests.Helpers;
+namespace Messaging.Tests.Helpers;
 
 public sealed class KafkaClientConfigFactoryTests
 {

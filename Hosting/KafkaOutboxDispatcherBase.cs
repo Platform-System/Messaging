@@ -1,8 +1,8 @@
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Platform.Messaging.Configurations;
+using Messaging.Configurations;
 
-namespace Platform.Messaging.Hosting;
+namespace Messaging.Hosting;
 
 public abstract class KafkaOutboxDispatcherBase<TClaimedMessage> : BackgroundService
 {

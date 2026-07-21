@@ -1,6 +1,6 @@
 using Confluent.Kafka;
 
-namespace Platform.Messaging.Helpers;
+namespace Messaging.Helpers;
 
 public sealed class KafkaRetryPartitionScheduler
 {

@@ -1,7 +1,7 @@
 using System.Data.Common;
 using Microsoft.EntityFrameworkCore;
 
-namespace Platform.Messaging.Helpers;
+namespace Messaging.Helpers;
 
 public static class RelationalLeaseClaimHelper
 {

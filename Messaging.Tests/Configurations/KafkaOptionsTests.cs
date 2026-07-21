@@ -1,7 +1,7 @@
-using Platform.Messaging.Configurations;
+using Messaging.Configurations;
 using Xunit;
 
-namespace Platform.Messaging.Tests.Configurations;
+namespace Messaging.Tests.Configurations;
 
 public sealed class KafkaOptionsTests
 {

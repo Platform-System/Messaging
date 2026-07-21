@@ -1,9 +1,9 @@
 using System.Data.Common;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
-using Platform.Messaging.Models;
+using Messaging.Models;
 
-namespace Platform.Messaging.Helpers;
+namespace Messaging.Helpers;
 
 public static class KafkaRetryLeaseHelper
 {

@@ -1,13 +1,13 @@
 using Confluent.Kafka;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Platform.Messaging.Abstractions;
-using Platform.Messaging.Configurations;
-using Platform.Messaging.Constants;
-using Platform.Messaging.Helpers;
-using Platform.Messaging.Implementations;
+using Messaging.Abstractions;
+using Messaging.Configurations;
+using Messaging.Constants;
+using Messaging.Helpers;
+using Messaging.Implementations;
 
-namespace Platform.Messaging.DependencyInjection;
+namespace Messaging.DependencyInjection;
 
 public static class DependencyInjection
 {

@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using Platform.Messaging.Helpers;
+using Messaging.Helpers;
 using Xunit;
 
-namespace Platform.Messaging.Tests.Helpers;
+namespace Messaging.Tests.Helpers;
 
 public sealed class EntityMutationHelperTests
 {

@@ -1,4 +1,4 @@
-namespace Platform.Messaging.Configurations;
+namespace Messaging.Configurations;
 
 public sealed class KafkaOptions
 {

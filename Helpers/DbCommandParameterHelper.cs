@@ -1,6 +1,6 @@
 using System.Data;
 
-namespace Platform.Messaging.Helpers;
+namespace Messaging.Helpers;
 
 public static class DbCommandParameterHelper
 {

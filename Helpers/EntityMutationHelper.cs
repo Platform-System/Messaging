@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using System.Linq.Expressions;
 
-namespace Platform.Messaging.Helpers;
+namespace Messaging.Helpers;
 
 public static class EntityMutationHelper
 {

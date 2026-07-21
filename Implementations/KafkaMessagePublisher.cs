@@ -1,8 +1,8 @@
 using System.Text.Json;
 using Confluent.Kafka;
-using Platform.Messaging.Abstractions;
+using Messaging.Abstractions;
 
-namespace Platform.Messaging.Implementations;
+namespace Messaging.Implementations;
 
 public sealed class KafkaMessagePublisher : IKafkaMessagePublisher
 {

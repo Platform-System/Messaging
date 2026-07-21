@@ -2,9 +2,9 @@ using System.Text.Json;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
-using Platform.Messaging.Models;
+using Messaging.Models;
 
-namespace Platform.Messaging.Helpers;
+namespace Messaging.Helpers;
 
 public static class KafkaRetryStoreHelper
 {

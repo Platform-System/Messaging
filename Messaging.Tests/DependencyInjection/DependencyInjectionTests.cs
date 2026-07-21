@@ -1,14 +1,14 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using Platform.Messaging.Abstractions;
-using Platform.Messaging.Configurations;
-using Platform.Messaging.Constants;
-using Platform.Messaging.DependencyInjection;
-using Platform.Messaging.Implementations;
+using Messaging.Abstractions;
+using Messaging.Configurations;
+using Messaging.Constants;
+using Messaging.DependencyInjection;
+using Messaging.Implementations;
 using Xunit;
 
-namespace Platform.Messaging.Tests.DependencyInjection;
+namespace Messaging.Tests.DependencyInjection;
 
 public sealed class DependencyInjectionTests
 {

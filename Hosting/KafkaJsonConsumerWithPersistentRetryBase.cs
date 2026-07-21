@@ -3,12 +3,12 @@ using Confluent.Kafka;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Platform.Messaging.Abstractions;
-using Platform.Messaging.Configurations;
-using Platform.Messaging.Helpers;
-using Platform.Messaging.Models;
+using Messaging.Abstractions;
+using Messaging.Configurations;
+using Messaging.Helpers;
+using Messaging.Models;
 
-namespace Platform.Messaging.Hosting;
+namespace Messaging.Hosting;
 
 public abstract class KafkaJsonConsumerWithPersistentRetryBase<TMessage, TOptions> : KafkaConsumerWithRetryBase<TMessage>
     where TMessage : class, new()

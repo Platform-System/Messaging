@@ -1,9 +1,9 @@
 using Microsoft.Extensions.Logging.Abstractions;
-using Platform.Messaging.Configurations;
-using Platform.Messaging.Hosting;
+using Messaging.Configurations;
+using Messaging.Hosting;
 using Xunit;
 
-namespace Platform.Messaging.Tests.Hosting;
+namespace Messaging.Tests.Hosting;
 
 public sealed class KafkaOutboxDispatcherBaseTests
 {

@@ -1,10 +1,10 @@
 using Confluent.Kafka;
 using Microsoft.Extensions.Options;
-using Platform.Messaging.Abstractions;
-using Platform.Messaging.Configurations;
-using Platform.Messaging.Helpers;
+using Messaging.Abstractions;
+using Messaging.Configurations;
+using Messaging.Helpers;
 
-namespace Platform.Messaging.Implementations;
+namespace Messaging.Implementations;
 
 public sealed class KafkaConsumerFactory : IKafkaConsumerFactory
 {

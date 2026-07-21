@@ -1,4 +1,4 @@
-namespace Platform.Messaging.Helpers;
+namespace Messaging.Helpers;
 
 public sealed class KafkaOutboxMessageTypeRegistry<TClaimedMessage>
 {
