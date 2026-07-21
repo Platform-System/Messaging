@@ -10,11 +10,11 @@ on:
 
 jobs:
   build:
-    uses: Platform-System/Platform.CI-CD/.github/workflows/build-dotnet.yml@main
+    uses: Platform-System/CI-CD/.github/workflows/build-dotnet.yml@main
     secrets: inherit
     with:
-      project_path: 'Platform.Messaging.csproj'
-      test_path: 'Platform.Messaging.Tests/Platform.Messaging.Tests.csproj'
+      project_path: 'Messaging.csproj'
+      test_path: 'Messaging.Tests/Messaging.Tests.csproj'
 
 
 
